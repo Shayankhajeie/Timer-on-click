@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Counter</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="currenttime"></p>
+    <button onclick="increment()">+</button>
+
+    <script>
+        let demo = document.getElementById("demo");
+        let i = 0;
+
+        function increment() {
+            i += 1;
+            demo.innerHTML = i;
+        }
+
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+           
+            i += 1;
+            demo.innerHTML = i;
+
+           
+            const date = new Date();
+            document.getElementById("currenttime").innerHTML = date.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>
